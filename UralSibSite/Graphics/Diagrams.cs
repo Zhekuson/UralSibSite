@@ -14,25 +14,14 @@ namespace UralSibSite.Graphics
         public static Color ShadowColor = Color.FromArgb(32, 0, 0, 0);
         public static Font DefaultFont = new Font("Helvetica", 14F, FontStyle.Bold);
         public static Color ForeColor = Color.FromArgb(26, 59, 105);
-        public static FileContentResult GetChart()
+        public static FileContentResult GetChart(SeriesChartType type, List<Tuple<double,string>> data, int width, int height)
         {
-            var dates = new List<Tuple<int, string>>(
-             new[]
-                    {
-                           new Tuple<int, string> (65, "January"),
-                           new Tuple<int, string> (69, "February"),
-                           new Tuple<int, string> (90, "March"),
-                           new Tuple<int, string> (81, "April"),
-                           new Tuple<int, string> (81, "May"),
-                           new Tuple<int, string> (55, "June"),
-                           new Tuple<int, string> (40, "July")
-                    }
-             );
+            var dates = data;
 
             var chart = new Chart();
 
-            chart.Width = 700;
-            chart.Height = 300;
+            chart.Width = width;
+            chart.Height = height;
 
             chart.BackColor = Color.FromArgb(211, 223, 240);
             chart.BorderlineDashStyle = ChartDashStyle.Solid;
@@ -48,7 +37,8 @@ namespace UralSibSite.Graphics
             chart.TextAntiAliasingQuality = TextAntiAliasingQuality.Normal;
             chart.Titles.Add(CreateTitle("FFF"));//todo fix title
             chart.Legends.Add(CreateLegend());
-            chart.Series.Add(CreateSeries(dates, SeriesChartType.Pie, Color.Red));
+            
+            chart.Series.Add(CreateSeries(dates, type, Color.Red));
             chart.ChartAreas.Add(CreateChartArea());
 
             var ms = new MemoryStream();
@@ -69,7 +59,7 @@ namespace UralSibSite.Graphics
             return title;
         }
 
-        public static Series CreateSeries(IList<Tuple<int, string>> results,
+        public static Series CreateSeries(IList<Tuple<double, string>> results,
        SeriesChartType chartType,
        Color color)
         {

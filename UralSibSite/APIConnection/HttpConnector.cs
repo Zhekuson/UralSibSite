@@ -15,7 +15,10 @@ namespace UralSibSite.APIConnection
         private static string password;
         private static NetworkCredential Credentials = new NetworkCredential(login, password);
         private static string encoded = Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(login + ":" + password));
+        public HttpConnector(string URL)
+        {
 
+        }
         /// <summary>
         /// Создает запрос 
         /// </summary>

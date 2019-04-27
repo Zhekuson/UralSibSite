@@ -7,5 +7,6 @@ namespace UralSibSite.APIConnection
 {
     public static class ApiConnections
     {
+
     }
 }

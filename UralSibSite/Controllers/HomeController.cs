@@ -7,6 +7,8 @@ using UralSibSite.Graphics;
 using System.Drawing;
 using System.IO;
 using System.Web.UI.DataVisualization.Charting;
+//remove later
+using Excel = Microsoft.Office.Interop.Excel;
 namespace UralSibSite.Controllers
 {
     public class HomeController : Controller
@@ -21,10 +23,12 @@ namespace UralSibSite.Controllers
             //  Graphics.Diagrams.
             return View();
         }
+        
         public FileContentResult Diagram()
         {
             FileContentResult diagram = Diagrams.GetChart();
             return diagram;
         }
+     
     }
 }
