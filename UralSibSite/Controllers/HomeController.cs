@@ -33,7 +33,7 @@ namespace UralSibSite.Controllers
             try
             {
                 //todo get request 
-                await UpdateDb();
+                await OfficeContext.UpdateDb();
                 ViewBag.ListOffices = OfficeContext.Offices;
                
             }
@@ -78,5 +78,10 @@ namespace UralSibSite.Controllers
             }
             return View();
         }
+        public FileContentResult MakePieChart()
+        {
+            List<Tuple<double, string>> data = new List<Tuple<double, string>>() { Tuple.Create(12.3, "cesdca"), Tuple.Create(12.3, "cecea") };
+            return Diagrams.GetPieChart(data, "TTTT", "CCCC", "AAAA", 500, 400);
+       }
     }
 }

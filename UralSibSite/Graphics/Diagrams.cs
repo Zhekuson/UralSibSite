@@ -121,7 +121,14 @@ namespace UralSibSite.Graphics
             return series;
 
        }
-       public static FileContentResult GetPieChart(List<Tuple<double,string>> data, string title, string chartName , int width, int height)
+       public static ChartArea GetChartAreaPieChart(string name)
+       {
+            ChartArea area = new ChartArea();
+            area.Name = name;
+            area.Position = new ElementPosition(0, 0, 100, 100);
+            return area;
+       }
+       public static FileContentResult GetPieChart(List<Tuple<double,string>> data, string title, string chartLegendName, string chartAreaName, int width, int height)
        {
             Chart chart = new Chart();
             chart.Titles.Add(CreateTitle(title));
@@ -129,10 +136,14 @@ namespace UralSibSite.Graphics
             chart.Width = width;
             chart.Height = height;
 
-            chart.Legends.Add(CreateLegend(chartName));
+            chart.Legends.Add(CreateLegend(chartLegendName));
             chart.Series.Add(GetSeriesPieChart());
 
-            chart.ChartAreas.Add();
-       }
+            chart.ChartAreas.Add(GetChartAreaPieChart(chartAreaName));
+
+            var ms = new MemoryStream();
+            chart.SaveImage(ms);
+            return new FileContentResult(ms.GetBuffer(), @"image/png");
+        }
     }
 }
