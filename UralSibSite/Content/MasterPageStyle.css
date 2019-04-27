@@ -1,0 +1,95 @@
+﻿header{
+	background-color: #0e3263;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	height: 15%;
+}
+#logo{
+	height: 6%;
+	width: 15%;
+	padding-left: 30px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	position: fixed;
+	size: inherit;
+	float: left;
+}
+body {
+
+}
+.menu{
+	text-align: center;
+	float:centure-right;
+	padding-top: 2.2%;
+
+}
+.wholesome{
+	display: inline;
+}
+#first{
+	padding-right: 4%;
+	padding-left: 4%;
+	text-decoration: none;
+	font-size: 200%;
+	color: #fcfcee;	
+	font-family: Serif;
+}
+#second{
+	padding-right: 4%;
+	padding-left: 4%;
+	text-decoration: none;
+	font-size: 200%;
+	color: #fcfcee;
+	font-family: Serif;
+}
+#third{
+	padding-left: 4%;
+	text-decoration: none;
+	font-size: 200%;
+	color: #fcfcee;
+	border: 1px soled #000000;
+	font-family: Serif;
+}
+footer{
+	background-color: #ffffff;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	height: 6%;
+}
+.foottext{
+	font-size: 30%;
+	float: left;
+	padding-left: 2%;
+	padding-top: 0.6%;
+	color: #434952;
+	size: inherit;
+}
+.bodyinfo{
+	background-color: #ebf2d3;
+	position: absolute;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	height: 85%;
+}
+.lining{
+	background-color: #fde910;
+	position: absolute;
+	right: 2%;
+	left: 2%;
+	top: 14%;
+	height: 0.5%;
+}
+.liningtwo{
+	background-color: #009900;
+	position: absolute;
+	right: 2%;
+	left: 2%;
+	top: 14.5%;
+	height: 0.5%;
+}
+
