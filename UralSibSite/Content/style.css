@@ -1,0 +1,197 @@
+﻿header{
+	background-color: #0e3263;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	height: 15%;
+	border: 1px solid #cccccc;
+}
+#logo{
+	height: 6%;
+	width: 15%;
+	padding-left: 30px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	position: fixed;
+	size: inherit;
+	float: left;
+}
+body {
+
+}
+.menu{
+	text-align: center;
+	float:centure-right;
+	padding-top: 2.2%;
+	font-size: 200%;
+	color: #fcfcee;	
+
+}
+.wholesome{
+	display: inline;
+}
+#first{
+	padding-right: 4%;
+	padding-left: 4%;
+	text-decoration: none;
+	color: #fcfcee;	
+	font-family: Serif;
+}
+#second{
+	padding-right: 4%;
+	padding-left: 4%;
+	text-decoration: none;
+	color: #fcfcee;	
+	font-family: Serif;
+}
+#third{
+	padding-left: 4%;
+	text-decoration: none;
+	color: #fcfcee;	
+	font-family: Serif;
+}
+footer{
+	background-color: #ffffff;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	height: 6%;
+	border: 1px solid #cccccc;
+}
+.foottext{
+	font-size: 30%;
+	float: left;
+	padding-left: 2%;
+	padding-top: 0.6%;
+	color: #434952;
+	size: inherit;
+}
+.bodyinfo{
+	background-color: #ebf2d3;
+	position: absolute;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	height: 85%;
+}
+.blockinfoone{
+	background-color:#ffffff;
+	position: fixed;
+	right: 2%;
+	left: 54%;
+	top: 20%;
+	height: 50%;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+.lining{
+	background-color: #fde910;
+	position: absolute;
+	right: 2%;
+	left: 2%;
+	top: 14%;
+	height: 0.5%;
+}
+.liningtwo{
+	background-color: #009900;
+	position: absolute;
+	right: 2%;
+	left: 2%;
+	top: 14.5%;
+	height: 0.5%;
+}
+.blockinfotwo{
+	background-color:#ffffff;
+	position: fixed;
+	right: 54%;
+	left: 2%;
+	top: 20%;
+	height: 50%;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+.blockinfo{
+	background-color:#ffffff;
+	position: fixed;
+	right: 15%;
+	left: 15%;
+	top: 20%;
+	height: 35%;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+}
+.listofbank{
+}
+form {
+  position: relative;
+  width: 70%;
+  margin: 5% auto;
+  background: #f0ffff;
+  border-bottom: 4px solid #0e3263;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.5);
+}
+input, button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+input {
+  width: 98.5%;
+  height: 42px;
+  padding-left: 15px;
+}
+button {
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  top: 0;
+  padding-right: 2%;
+  cursor: pointer;
+}
+button:before {
+  content: "\f175";
+  font-family: Arial;
+  font-size: 20px;
+  color: #be290e;
+}
+option{
+	width: 70%;
+	background-color: #f0ffff;
+}
+#usersone{
+	text-decoration: none;
+	color: #575757;
+	font-family: Tahoma;
+	text-align: center;
+	font-size: 150%;
+}
+.amountalluser{
+	color: #575757;
+	font-family: Serif;
+	text-align: center;
+	font-size: 150%;
+}
+.usertable{
+		width: 95%;
+		margin: 2% auto;
+		text-align: center;
+}
+.userinfo{
+	text-align: center;
+	font-family: Serif;
+	border: 1px solid grey;
+	background-color:#f0ffff;
+	margin-left: 2%;
+	margin-right: 2%;
+	box-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+	display: flex;
+}
+samp{
+	padding: 1.5%;
+	border-right: 1px solid grey;
+}

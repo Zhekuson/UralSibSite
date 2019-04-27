@@ -150,6 +150,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\www_uralsib.png" />
     <Content Include="Content\MasterPageStyle.css" />
+    <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -167,7 +168,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Home\bankspage.html" />
+    <Content Include="Views\Home\userpage.html" />
     <Content Include="Views\Shared\HomeMasterPage.cshtml" />
+    <Content Include="Views\Shared\masterpage.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -181,6 +185,7 @@
     <Content Include="Views\Home\Departments.cshtml" />
     <Content Include="Views\Home\DepartmentInfo.cshtml" />
     <Content Include="Views\Home\Assesments.cshtml" />
+    <Content Include="Views\Shared\templ.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

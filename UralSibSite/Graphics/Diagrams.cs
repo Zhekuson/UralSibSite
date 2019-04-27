@@ -121,7 +121,8 @@ namespace UralSibSite.Graphics
             return series;
 
        }
-       public static ChartArea GetChartAreaPieChart(string name)
+        #region custom
+        public static ChartArea GetChartAreaPieChart(string name)
        {
             ChartArea area = new ChartArea();
             area.Name = name;
@@ -145,5 +146,6 @@ namespace UralSibSite.Graphics
             chart.SaveImage(ms);
             return new FileContentResult(ms.GetBuffer(), @"image/png");
         }
+        #endregion
     }
 }
