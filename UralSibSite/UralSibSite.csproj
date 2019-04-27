@@ -134,6 +134,8 @@
     <Compile Include="Graphics\Diagrams.cs" />
     <Compile Include="Models\Assesments\Assesment.cs" />
     <Compile Include="Models\Assesments\AssesmentContext.cs" />
+    <Compile Include="Models\Coupons\Coupon.cs" />
+    <Compile Include="Models\Coupons\CouponContext.cs" />
     <Compile Include="Models\Offices\Office.cs" />
     <Compile Include="Models\Offices\OfficeContext.cs" />
     <Compile Include="Models\Offices\OfficeCoords.cs" />
@@ -145,7 +147,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\ErrorPageStyle.css" />
     <Content Include="Content\Images\www_uralsib.png" />
     <Content Include="Content\MasterPageStyle.css" />
     <Content Include="favicon.ico" />

@@ -114,5 +114,10 @@ namespace UralSibSite.Graphics
             chartArea.AxisX.Interval = 1;
             return chartArea;
         }
+
+       // public static FileContentResult GetPieChart(List<Tuple<>>)
+      //  {
+
+       // }
     }
 }

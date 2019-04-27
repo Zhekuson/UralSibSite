@@ -13,7 +13,7 @@ namespace UralSibSite.Models.Offices
 
         public async static Task UpdateDb()
         {
-           Offices = await ApiConnections.GetAllEntitiesAsync<Office>(ApiConnections.baseurlOffices)
+            Offices = await ApiConnections.GetAllEntitiesAsync<Office>(ApiConnections.baseurlOffices);
         }
         
     }
