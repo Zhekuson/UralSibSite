@@ -36,7 +36,7 @@ namespace UralSibSite.Graphics
             chart.AntiAliasing = AntiAliasingStyles.All;
             chart.TextAntiAliasingQuality = TextAntiAliasingQuality.Normal;
             chart.Titles.Add(CreateTitle("FFF"));//todo fix title
-            chart.Legends.Add(CreateLegend());
+            chart.Legends.Add(CreateLegend("FF"));
             
             chart.Series.Add(CreateSeries(dates, type, Color.Red));
             chart.ChartAreas.Add(CreateChartArea());
@@ -84,12 +84,12 @@ namespace UralSibSite.Graphics
 
             return seriesDetail;
         }
-        public static Legend CreateLegend()
+        public static Legend CreateLegend(string chartName)
         {
             var legend = new Legend()
             {
 
-                Name = "Result Chart",
+                Name = chartName,
                 Docking = Docking.Bottom,
                 Alignment = StringAlignment.Center,
                 BackColor = Color.Transparent,
@@ -114,10 +114,25 @@ namespace UralSibSite.Graphics
             chartArea.AxisX.Interval = 1;
             return chartArea;
         }
+       public static Series GetSeriesPieChart()
+       {
+            Series series = new Series();
+            
+            return series;
 
-       // public static FileContentResult GetPieChart(List<Tuple<>>)
-      //  {
+       }
+       public static FileContentResult GetPieChart(List<Tuple<double,string>> data, string title, string chartName , int width, int height)
+       {
+            Chart chart = new Chart();
+            chart.Titles.Add(CreateTitle(title));
 
-       // }
+            chart.Width = width;
+            chart.Height = height;
+
+            chart.Legends.Add(CreateLegend(chartName));
+            chart.Series.Add(GetSeriesPieChart());
+
+            chart.ChartAreas.Add();
+       }
     }
 }

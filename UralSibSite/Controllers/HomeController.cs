@@ -30,15 +30,32 @@ namespace UralSibSite.Controllers
         }
         public async Task<ActionResult> Departments()
         {
-            //todo get request 
-            await UpdateDb();
-            ViewBag.ListOffices = OfficeContext.Offices;
+            try
+            {
+                //todo get request 
+                await UpdateDb();
+                ViewBag.ListOffices = OfficeContext.Offices;
+               
+            }
+            catch (HttpException e)
+            {
+                //todo error logic
+            }
             return View();
         }
         public async Task<ActionResult> DepartmentInfo(int Id)
         {
-            await OfficeContext.UpdateDb();
-            ViewBag.Office = Offices.Find(x => x.Id == Id);
+
+            try
+            {
+                await OfficeContext.UpdateDb();
+                ViewBag.Office = Offices.Find(x => x.Id == Id);
+            
+            }
+            catch (HttpException e)
+            {
+                //todo error logic
+            }
             return View();
         } 
         public FileContentResult Diagram()
@@ -49,8 +66,16 @@ namespace UralSibSite.Controllers
      
         public async Task<ActionResult> Assesments()
         {
-            await AssesmentContext.UpdateDb();
-            ViewBag.Assesments = AssesmentContext.Assesments;
+
+            try
+            {
+                await AssesmentContext.UpdateDb();
+                ViewBag.Assesments = AssesmentContext.Assesments;  
+            }
+            catch (HttpException e)
+            {
+                //todo error logic
+            }
             return View();
         }
     }

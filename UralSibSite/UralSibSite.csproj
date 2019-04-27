@@ -140,6 +140,7 @@
     <Compile Include="Models\Offices\OfficeContext.cs" />
     <Compile Include="Models\Offices\OfficeCoords.cs" />
     <Compile Include="Models\Offices\OfficePhone.cs" />
+    <Compile Include="Models\Users\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -183,7 +184,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Users\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
