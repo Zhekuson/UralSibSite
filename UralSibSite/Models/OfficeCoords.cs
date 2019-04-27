@@ -8,9 +8,9 @@ namespace UralSibSite.Models
 {
     public class OfficeCoords
     {
-       // [JsonProperty("Lat")]
-        public double Lat{ get; set; }
-       // [JsonProperty("Lon")]
-        public double Lon{ get; set; }
+        [JsonProperty("Lat")]
+        public double Latitude{ get; set; }
+        [JsonProperty("Lon")]
+        public double Longitude{ get; set; }
     }
 }

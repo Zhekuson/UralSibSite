@@ -9,9 +9,8 @@ using System.Drawing;
 using System.IO;
 using System.Web.UI.DataVisualization.Charting;
 //remove later
-using Excel = Microsoft.Office.Interop.Excel;
 using UralSibSite.Models;
-
+using static UralSibSite.Models.OfficeContext;
 namespace UralSibSite.Controllers
 {
     public class HomeController : Controller
@@ -29,9 +28,9 @@ namespace UralSibSite.Controllers
         public async Task<ActionResult> Departments()
         {
             //todo get request 
+            await UpdateDb();
 
-            List<Office> offices = await APIConnection.ApiConnections.GetAllOfficesAsync();
-            ViewBag.ListOffices = offices;
+            ViewBag.ListOffices = OfficeContext.Offices;
             return View();
         }
         public ActionResult DepartmentInfo(int Id)

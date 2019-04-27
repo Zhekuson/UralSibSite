@@ -8,23 +8,23 @@ namespace UralSibSite.Models
 {
     public class Office
     {
-      //  [JsonProperty("ID")]
+       [JsonProperty("ID")]
         public int Id { get; set; }
-       // [JsonProperty("CompanyID")]
+       [JsonProperty("CompanyID")]
         public int CompanyId { get; set; }
-      //  [JsonProperty("Name")]
+        [JsonProperty("Name")]
         public string Name { get; set; }
-       // [JsonProperty("Address")]
+       [JsonProperty("Address")]
         public string Adress { get; set; }
-       // [JsonProperty("Country")]
+       [JsonProperty("Country")]
         public string Country { get; set; }
-       // [JsonProperty("Coordinates")]
+       [JsonProperty("Coordinates")]
         public OfficeCoords Coordinates { get; set; }
-       // [JsonProperty("Website")]
+       [JsonProperty("Website")]
         public string Website { get; set; }
-       // [JsonProperty("WorkHours")]
+       [JsonProperty("WorkHours")]
         public string WorkHours { get; set; }
-        //[JsonProperty("Phone")]
+       [JsonProperty("Phone")]
         public List<OfficePhone> Phone{get; set;}
     }
 }

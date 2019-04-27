@@ -9,11 +9,11 @@ namespace UralSibSite.Models
     
     public class OfficePhone
     {
-      //  [JsonProperty("Number")]
+        [JsonProperty("Number")]
         public string Number { get; set; }
-       // [JsonProperty("Type")]
+        [JsonProperty("Type")]
         public string Type { get; set; }
-       // [JsonProperty("Info")]
+        [JsonProperty("Info")]
         public string Info { get; set; }
     }
 }

@@ -3,7 +3,7 @@
 }
 
 <!DOCTYPE html>
-
+@using UralSibSite.Models;
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -11,7 +11,13 @@
 </head>
 <body>
     <div>
-       @ViewBag.ListOffices
+       @{
+           foreach(Office office in ViewBag.ListOffices)
+           {
+                 <h1>@office.Id</h1>
+           }
+
+         }
     </div>
 </body>
 </html>
