@@ -19,7 +19,7 @@ namespace UralSibSite
                 defaults: new { controller = "Home", action = "Main", id = UrlParameter.Optional }
             );
             routes.MapRoute(
-            name: "Default",
+            name: "NonDef",
             url: "{controller}/{action}/{id}",
             defaults: new { controller = "Home", action = "Main", id = UrlParameter.Optional }
         );
