@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using UralSibSite.Graphics;
+using System.Threading.Tasks;
 using System.Drawing;
 using System.IO;
 using System.Web.UI.DataVisualization.Charting;
@@ -25,17 +26,18 @@ namespace UralSibSite.Controllers
             //  Graphics.Diagrams.
             return View();
         }
-        public ActionResult Departments()
+        public async Task<ActionResult> Departments()
         {
             //todo get request 
-            List<Office> offices = new List<Office>();
+
+            List<Office> offices = await APIConnection.ApiConnections.GetAllOfficesAsync();
             ViewBag.ListOffices = offices;
             return View();
         }
-        public ActionResult Departments(int Id)
+        public ActionResult DepartmentInfo(int Id)
         {
             
-            ViewBag.ListOffices = offices;
+            
             return View();
         } 
         public FileContentResult Diagram()

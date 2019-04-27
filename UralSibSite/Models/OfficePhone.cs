@@ -6,13 +6,14 @@ using System.Web;
 
 namespace UralSibSite.Models
 {
+    
     public class OfficePhone
     {
-        [JsonProperty("number")]
+      //  [JsonProperty("Number")]
         public string Number { get; set; }
-        [JsonProperty("type")]
+       // [JsonProperty("Type")]
         public string Type { get; set; }
-        [JsonProperty("info")]
+       // [JsonProperty("Info")]
         public string Info { get; set; }
     }
 }
