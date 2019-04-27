@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace UralSibSite.Models
+namespace UralSibSite.Models.Offices
 {
     public class OfficeCoords
     {

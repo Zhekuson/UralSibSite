@@ -10,7 +10,10 @@ using System.IO;
 using System.Web.UI.DataVisualization.Charting;
 //remove later
 using UralSibSite.Models;
-using static UralSibSite.Models.OfficeContext;
+using static UralSibSite.Models.Offices.OfficeContext;
+using UralSibSite.Models.Offices;
+using UralSibSite.Models.Assesments;
+
 namespace UralSibSite.Controllers
 {
     public class HomeController : Controller
@@ -29,14 +32,13 @@ namespace UralSibSite.Controllers
         {
             //todo get request 
             await UpdateDb();
-
             ViewBag.ListOffices = OfficeContext.Offices;
             return View();
         }
-        public ActionResult DepartmentInfo(int Id)
+        public async Task<ActionResult> DepartmentInfo(int Id)
         {
-            
-            
+            await OfficeContext.UpdateDb();
+            ViewBag.Office = Offices.Find(x => x.Id == Id);
             return View();
         } 
         public FileContentResult Diagram()
@@ -45,5 +47,11 @@ namespace UralSibSite.Controllers
             return diagram;
         }
      
+        public async Task<ActionResult> Assesments()
+        {
+            await AssesmentContext.UpdateDb();
+            ViewBag.Assesments = AssesmentContext.Assesments;
+            return View();
+        }
     }
 }

@@ -132,10 +132,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Graphics\Diagrams.cs" />
-    <Compile Include="Models\Office.cs" />
-    <Compile Include="Models\OfficeContext.cs" />
-    <Compile Include="Models\OfficeCoords.cs" />
-    <Compile Include="Models\OfficePhone.cs" />
+    <Compile Include="Models\Assesments\Assesment.cs" />
+    <Compile Include="Models\Assesments\AssesmentContext.cs" />
+    <Compile Include="Models\Offices\Office.cs" />
+    <Compile Include="Models\Offices\OfficeContext.cs" />
+    <Compile Include="Models\Offices\OfficeCoords.cs" />
+    <Compile Include="Models\Offices\OfficePhone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -175,10 +177,11 @@
     <Content Include="Views\Home\Main.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Home\Departments.cshtml" />
+    <Content Include="Views\Home\DepartmentInfo.cshtml" />
+    <Content Include="Views\Home\Assesments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Offices\" />
     <Folder Include="Models\Users\" />
   </ItemGroup>
   <ItemGroup>

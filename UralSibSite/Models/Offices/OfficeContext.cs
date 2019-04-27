@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Web;
 using UralSibSite.APIConnection;
 
-namespace UralSibSite.Models
+namespace UralSibSite.Models.Offices
 {
     public static class OfficeContext
     {
@@ -13,7 +13,7 @@ namespace UralSibSite.Models
 
         public async static Task UpdateDb()
         {
-           Offices = await APIConnection.ApiConnections.GetAllOfficesAsync();
+           Offices = await ApiConnections.GetAllEntitiesAsync<Office>(ApiConnections.baseurlOffices)
         }
         
     }
