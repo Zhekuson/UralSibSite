@@ -9,6 +9,8 @@ using System.IO;
 using System.Web.UI.DataVisualization.Charting;
 //remove later
 using Excel = Microsoft.Office.Interop.Excel;
+using UralSibSite.Models;
+
 namespace UralSibSite.Controllers
 {
     public class HomeController : Controller
@@ -23,7 +25,19 @@ namespace UralSibSite.Controllers
             //  Graphics.Diagrams.
             return View();
         }
-        
+        public ActionResult Departments()
+        {
+            //todo get request 
+            List<Office> offices = new List<Office>();
+            ViewBag.ListOffices = offices;
+            return View();
+        }
+        public ActionResult Departments(int Id)
+        {
+            
+            ViewBag.ListOffices = offices;
+            return View();
+        } 
         public FileContentResult Diagram()
         {
             FileContentResult diagram = Diagrams.GetChart(SeriesChartType.Pie,null,300,700);

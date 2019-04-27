@@ -142,6 +142,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ErrorPageStyle.css" />
     <Content Include="Content\Images\www_uralsib.png" />
     <Content Include="Content\MasterPageStyle.css" />
     <Content Include="favicon.ico" />
