@@ -8,7 +8,7 @@ using System.Web;
 
 namespace UralSibSite.APIConnection
 {
-    public class ApiConnector
+    public class HttpConnector
     {
         public static string BaseUrlString;
         private static string login;
@@ -19,10 +19,10 @@ namespace UralSibSite.APIConnection
         /// <summary>
         /// Создает запрос 
         /// </summary>
-        /// <param name="method"></param>
-        /// <param name="url"></param>
+        /// <param name="method">GET обычно</param>
+        /// <param name="url">url</param>
         /// <returns></returns>
-        private WebRequest CreateRequest(string method, string url)
+        private WebRequest CreateRequest(string url, string method="GET")
         {
             WebRequest webRequest = WebRequest.Create(url);
             webRequest.Method = method;
@@ -33,7 +33,8 @@ namespace UralSibSite.APIConnection
             return webRequest;
         } 
         /// <summary>
-        /// Возвращает результат в виде строки с данными
+        /// Возвращает результат в виде строки с данными.
+        /// Выдает Exception с инфой по статусу ошибки.
         /// </summary>
         /// <param name="request">уже созданный запрос</param>
         /// <returns></returns>
@@ -47,8 +48,7 @@ namespace UralSibSite.APIConnection
                 string result = await responseReader.ReadToEndAsync();
                 return result;
             }
-            else throw new HttpException(response.StatusDescription);
-            
+            else throw new HttpException(response.StatusDescription);          
         }
     }
 }
