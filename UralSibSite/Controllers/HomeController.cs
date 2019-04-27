@@ -26,7 +26,7 @@ namespace UralSibSite.Controllers
         
         public FileContentResult Diagram()
         {
-            FileContentResult diagram = Diagrams.GetChart();
+            FileContentResult diagram = Diagrams.GetChart(SeriesChartType.Pie,null,300,700);
             return diagram;
         }
      
