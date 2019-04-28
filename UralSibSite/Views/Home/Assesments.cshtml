@@ -1,7 +1,7 @@
 ﻿@{
     Layout = "~/Views/Shared/HomeMasterPage.cshtml";
 }
-
+@using UralSibSite.Models.Assesments;
 <!DOCTYPE html>
 
 <html>
@@ -11,19 +11,22 @@
     <title></title>
 </head>
 <body>
-    <div class="lining">
-    </div>
-    <div class="liningtwo">
-    </div>
+
     <div class="bodyinfo">
         <div>
             <div class="blockinfo">
                 @using (Html.BeginForm("AssesmentsInfo", "Home", FormMethod.Post))
                 {
-                    <input type="text"  name="UserId" placeholder="Поиск по Id">
-                    <button name="UserId"  value="find" ></button>
+                    <input type="text" name="UserId" placeholder="Поиск по Id">
+                    <datalist class="lists" id="datalist">
+                        @foreach (Assesment asses in ViewBag.Assesments)
+                        {
+                            <option value="ID пользователя @asses.UserId"> ID талона @asses.Id</option>
+                        }
+                    </datalist>
+                    <button name="UserId" value="find"></button>
                 }
-  
+
 
             </div>
         </div>

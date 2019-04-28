@@ -9,19 +9,13 @@
 
 <body>
     <div>
-        <div class="blockinfoone">
-            <img src="@Url.Action("MakePieChart")" />
+       <div class="blockinfoone">>
+            <img src="@Url.Action("GetChart")" />
 
         </div>
-        <div class="blockinfotwo">
-            <a href="#" id="usersone">
-
-                <h2>Посетителей за сегодня:</h2>
-                <h1>@ViewBag.sum</h1>
-                <h3>-Юридических лиц: @ViewBag.yur</h3>
-                <h3>-Физических лиц: @ViewBag.phiz</h3>
-            </a>
-        </div>
+       <div class="blockinfotwo">
+           <img src="http://localhost:50072/Home/BarChart?Id=1" />
+       </div>
     </div>
 </body>
    

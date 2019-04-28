@@ -37,16 +37,6 @@
                 }
 
 
-
-
-                    <ul>
-                        @foreach (Office office in ViewBag.ListOffices)
-                        {
-
-                            <li><a href=@Url.Action($"DepartmentInfo/{office.CompanyId}")>@office.Address</a></li>
-
-                        }
-                    </ul>
                 </div>
          
         </div>

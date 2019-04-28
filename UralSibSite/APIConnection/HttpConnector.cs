@@ -29,10 +29,7 @@ namespace UralSibSite.APIConnection
         {
             WebRequest webRequest = WebRequest.Create(url);
             webRequest.Method = method;
-            // optional
-            //webRequest.PreAuthenticate = true;
-            //webRequest.Credentials = Credentials;
-            //webRequest.Headers.Add("Authorization", "Basic " + encoded);
+      
             return webRequest;
         } 
         /// <summary>
