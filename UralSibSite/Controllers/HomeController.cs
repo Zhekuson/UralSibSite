@@ -13,6 +13,7 @@ using UralSibSite.Models;
 using UralSibSite.Models.Offices;
 using UralSibSite.Models.Assesments;
 using UralSibSite.Models.Coupons;
+using System.Web.UI.WebControls;
 
 namespace UralSibSite.Controllers
 {
@@ -129,6 +130,52 @@ namespace UralSibSite.Controllers
             return Diagrams.GetPieChart(data, "TTTT", "CCCC", "AAAA", 500, 400);
         }
 
+        [ActionName("PieChart")]
+        public FileContentResult PieChart()
+        {
+            // Форматировать диаграмму
+            Chart Chart1 = new Chart();
+            var dates = new List<Tuple<double, string>>(
+                new[]
+                {
+                    new Tuple<double, string>(86,"86%"),
+                    new Tuple<double, string>(14,"14%")
+                }
+            );
+            Chart1.BorderlineDashStyle = ChartDashStyle.Solid;
+            Chart1.BorderlineColor = Color.Gray;
+            Chart1.BorderSkin.SkinStyle = BorderSkinStyle.Emboss;
+
+            // Форматировать область диаграммы
+            Chart1.ChartAreas[0].BackColor = Color.Wheat;
+
+            Chart1.Series.Add(new Series("Default")
+            {
+                ChartType = SeriesChartType.Pie
+            });
+            
+            var ms = new MemoryStream();
+            Chart1.SaveImage(ms);
+            return new FileContentResult(ms.GetBuffer(), @"image/png");
+        }
+
+        public class MyObjectDataSource
+        {
+
+            public class DataItem
+            {
+                public string Name { get; set; }
+                public double Popularity { get; set; }
+            }
+
+            public DataItem[] GetData()
+            {
+                return new DataItem[] {
+            new DataItem() {Name = "Негативные отзывы", Popularity = 14 },
+            new DataItem() {Name = "Положительные отзывы", Popularity = 86},
+        };
+            }
+        }
         [ActionName("BarChart")]
         public ChartResult BarChart(int id)
         {
@@ -136,42 +183,36 @@ namespace UralSibSite.Controllers
             chart.Width = 480;
             chart.Height = 300;
             chart.RenderType = RenderType.ImageTag;
-            chart.Palette = ChartColorPalette.Fire;
-            Title t = new Title("Bar Chart", Docking.Left, new Font("Trebuchet MS", 14, FontStyle.Bold), Color.Black);
-            chart.Titles.Add(t);
+            chart.Palette = ChartColorPalette.Grayscale;
+           
 
 
-            chart.BorderSkin.SkinStyle = BorderSkinStyle.Emboss;
-            chart.BorderlineWidth = 2;
-            chart.BorderlineColor = Color.Black;
+
+            chart.BorderlineWidth = 1;
+            chart.BorderlineColor = Color.Gray;
             chart.BorderlineDashStyle = ChartDashStyle.Solid;
 
             chart.ChartAreas.Add("Default");
 
             chart.Legends.Add("Legend1");
 
-            chart.Series.Add("Series 1");
-            chart.Series.Add("Series 2");
+            chart.Series.Add("Clients");
+
 
             List<int> data = new List<int>();
-            data.Add(3);
-            data.Add(9);
-            data.Add(5);
-            data.Add(2);
-            data.Add(4);
-            data.Add(7);
+            data.Add(100);
+            data.Add(200);
+            data.Add(150);
+            data.Add(600);
+            data.Add(497);
 
             //Series 1 
             foreach (int value in data)
             {
-                chart.Series["Series 1"].Points.AddY(value);
+                chart.Series["Clients"].Points.AddY(value);
             }
 
-            //Series 2 
-            foreach (int value in data)
-            {
-                chart.Series["Series 2"].Points.AddY(value - 1);
-            }
+
 
             return new ChartResult(chart, ChartImageFormat.Png);
         }

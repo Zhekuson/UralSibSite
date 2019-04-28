@@ -36,13 +36,11 @@ namespace UralSibSite.Graphics
              );
 
             var chart = new Chart();
-            int width = 350;
-            int height = 150;
 
-            chart.Width = width;
-            chart.Height = height;
+            chart.Width = 800;
+            chart.Height = 350;
 
-            chart.BackColor = Color.FromArgb(211, 223, 240);
+            chart.BackColor = Color.FromArgb(0, 0, 0);
             chart.BorderlineDashStyle = ChartDashStyle.Solid;
 
             chart.BackSecondaryColor = Color.White;
@@ -51,11 +49,10 @@ namespace UralSibSite.Graphics
             chart.Palette = ChartColorPalette.BrightPastel;
             chart.BorderlineColor = Color.FromArgb(26, 59, 105);
             chart.RenderType = RenderType.BinaryStreaming;
-            chart.BorderSkin.SkinStyle = BorderSkinStyle.Emboss;
             chart.AntiAliasing = AntiAliasingStyles.All;
             chart.TextAntiAliasingQuality = TextAntiAliasingQuality.Normal;
-            chart.Titles.Add(CreateTitle("Оценка клиентов"));//todo fix title
-            chart.Legends.Add(CreateLegend("gg"));
+            chart.Titles.Add(CreateTitle("Активность"));//todo fix title
+            chart.Legends.Add(CreateLegend("- количество принятых клиентов"));
             
             chart.Series.Add(CreateSeries(dates, SeriesChartType.Line, Color.Green));
             chart.ChartAreas.Add(CreateChartArea());

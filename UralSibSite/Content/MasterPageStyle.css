@@ -13,7 +13,6 @@
 	padding-top: 2%;
 	padding-bottom: 2%;
 	position: fixed;
-	size: inherit;
 	float: left;
 }
 body {
@@ -35,6 +34,7 @@ body {
 	font-size: 200%;
 	color: #fcfcee;	
 	font-family: Serif;
+
 }
 #second{
 	padding-right: 4%;

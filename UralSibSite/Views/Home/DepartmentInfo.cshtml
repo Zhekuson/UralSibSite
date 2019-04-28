@@ -7,17 +7,7 @@
 <body>
 
     <div class="blockinfoone">
-
-        @using (Html.BeginForm("CreateGraph", "Home"))
-        {
-            <input type="hidden" value="" />
-
-        }
-        @(Html.ActionLink("CreateGraph", "CreateGraph", "Home"))
-        <img src="@(Html.ActionLink("CreateGraph", "CreateGraph", "Home"))" />
-        <img src="http://localhost:50072/Home/BarChart?Id=1" />
         <img src="http://localhost:50072/Home/CreateGraph"/>
-        @(Html.ActionLink("BarChart", "BarChart", "Home"))
     </div>
     <div class="blockinfotwo">
         <a href="#" id="usersone">

@@ -8,15 +8,14 @@
 </head>
 <body>
     <header>
-        <div>
+        <div class="headder">
             <div class="wholesome">
                 <a href="https://www.uralsib.ru/">
                     <img id="logo" src="~/Content/Images/www_uralsib.png" />
                 </a>
             </div>
             <div class="menu">
-
-                <a href="#" id="first">Главная</a>|
+                <a href="@Url.Action("Main")" id="first">Главная</a>|
                 <a href =@Url.Action("Departments") id="second">Отделения</a>|
                 <a href="@Url.Action("Assesments")" id="third">Клиент</a>
             </div>
