@@ -1,5 +1,5 @@
 ﻿@{
-    Layout ="~/Views/Shared/HomeMasterPage.cshtml";
+    Layout = "~/Views/Shared/HomeMasterPage.cshtml";
 }
 
 <!DOCTYPE html>
@@ -7,7 +7,10 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="~/Content/style.css"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+    <script type = "text/javascript" href = "https://code.jquery.com/jquery-3.4.0.js"></script>
+    @Scripts.Render("~/MyScripts/MyScript.js")
+  
     <title></title>
 </head>
 <body>
@@ -20,18 +23,32 @@
     <div class="bodyinfo">
         <div>
             <div class="blockinfo">
-                <form>
-                    <input type="text" placeholder="Искать здесь..." list="qwe">
-                    <button type="submit"></button>
-                    <datalist class="lists" id="qwe">
-                        <option label="123" value="text1">
-                        <option value="xt2">
-                        <option value="qwer">
-                        <option value="teopi">
-                        <option value="12354">
-                </form>
-            </div>
 
+                @using (Html.BeginForm("DepartmentInfo", "Home", FormMethod.Post))
+                {
+                    <input type="text" name="Id" placeholder="Искать здесь..." list="datalist">
+                    <button name="Id" value="find"></button>
+                    <datalist class="lists" id="datalist">
+                        @foreach (Office office in ViewBag.ListOffices)
+                        {
+                            <option value="@office.Id">@office.Address</option>
+                        }
+                    </datalist>
+                }
+
+
+
+
+                    <ul>
+                        @foreach (Office office in ViewBag.ListOffices)
+                        {
+
+                            <li><a href=@Url.Action($"DepartmentInfo/{office.CompanyId}")>@office.Address</a></li>
+
+                        }
+                    </ul>
+                </div>
+         
         </div>
     </div>
 

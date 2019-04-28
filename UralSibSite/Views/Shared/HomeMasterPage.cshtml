@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="~/Content/style.css">
-    <title></title>
+    <title>Главная</title>
 </head>
 <body>
     <header>
@@ -17,8 +17,8 @@
             <div class="menu">
 
                 <a href="#" id="first">Главная</a>|
-                <a href="bankspage.html" id="second">Отделения</a>|
-                <a href="userpage.html" id="third">Клиент</a>
+                <a href =@Url.Action("Departments") id="second">Отделения</a>|
+                <a href="@Url.Action("Assesments")" id="third">Клиент</a>
             </div>
         </div>
     </header>

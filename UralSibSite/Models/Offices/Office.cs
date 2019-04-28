@@ -15,7 +15,7 @@ namespace UralSibSite.Models.Offices
         [JsonProperty("Name")]
         public string Name { get; set; }
        [JsonProperty("Address")]
-        public string Adress { get; set; }
+        public string Address { get; set; }
        [JsonProperty("Country")]
         public string Country { get; set; }
        [JsonProperty("Coordinates")]

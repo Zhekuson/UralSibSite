@@ -3,21 +3,23 @@
     ViewBag.Title = "Home Page";
 
 }
-   
-        
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+</head>
+
 <body>
     <div>
         <div class="blockinfoone">
-            <!в этот блог диаграмму>
+            <img src="@Url.Action("MakePieChart")" />
 
         </div>
         <div class="blockinfotwo">
             <a href="#" id="usersone">
-                <!вместо цифр значиния>
-                <h2>Пользователей за сегодня:</h2>
-                <h1>12345</h1>
-                <h3>-Юридических лиц: 12340</h3>
-                <h3>-Физических лиц: 5</h3>
+
+                <h2>Посетителей за сегодня:</h2>
+                <h1>@ViewBag.sum</h1>
+                <h3>-Юридических лиц: @ViewBag.yur</h3>
+                <h3>-Физических лиц: @ViewBag.phiz</h3>
             </a>
         </div>
     </div>
